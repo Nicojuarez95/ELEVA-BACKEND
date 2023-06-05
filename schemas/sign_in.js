@@ -5,15 +5,15 @@ const schema_signin = Joi.object({
     .required()
     .email({ minDomainSegments: 2 })
     .messages({
-      'string.empty': 'The email cannot be empty',
-      'any.required': 'A email is required',
+      'string.empty': 'El correo electrónico no puede estar vacío',
+      'any.required': 'Se requiere un correo electrónico',
     }),
   password: Joi
     .string()
     .required()
     .messages({
-      'string.empty': 'The password cannot be empty',
-      'any.required': 'A password is required',
+      'string.empty': 'La contraseña no puede estar vacía',
+      'any.required': 'Se requiere una contraseña',
     })
 });
 

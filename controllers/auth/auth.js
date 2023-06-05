@@ -23,7 +23,7 @@ const controller = {
 
             return res.status(201).json({
                 succes: true,
-                message: 'User Registered!'
+                message: 'Usuario Registrado!'
             })
         } catch (error) {
             next(error)
@@ -45,7 +45,7 @@ const controller = {
             )
             return res.status(200).json({
                 succes: true,
-                message: 'Logged in!',
+                message: 'Conectado!',
                 user,
                 token
             })
@@ -64,7 +64,7 @@ const controller = {
             )
             return res.status(200).json({
                 succes: true,
-                message: 'Offline user!'
+                message: 'usuario desconectado!'
             })
         } catch (error) {
             next(error)
@@ -86,7 +86,7 @@ const controller = {
             )
             return res.status(200).json({
                 succes: true,
-                message: 'Logged in!',
+                message: 'Conectado!',
                 user,
                 token
             })
@@ -98,7 +98,7 @@ const controller = {
     verifyMail: async (req, res, next) => {
         try {
             const verify_code = req.query.verify_code
-            if (!verify_code) return res.status(404).json('Verify Code not found...')
+            if (!verify_code) return res.status(404).json('La verificación no fue realizada')
 
             const user = await User.findOne({ verify_code })
 
@@ -121,7 +121,7 @@ const controller = {
                     token,
                     is_verified: user?.is_verified
                 })
-            } else res.status(404).json('Mail verification failed, invalid token')
+            } else res.status(404).json('Verificación fallida')
 
         } catch (error) {
             console.log(error)

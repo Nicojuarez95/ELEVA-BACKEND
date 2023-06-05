@@ -47,14 +47,14 @@ async function get_all(req, res, next) {
             }else{
                 return res.status(404).json({
                     success:false,
-                    message: "Products not found"
+                    message: "Productos no encontrados"
                 })
             }
             
         }else{
             return res.status(404).json({
                 success:false,
-                message: "Shop not found"
+                message: "Tienda no encontrada"
             })
         }
 

@@ -12,7 +12,7 @@ const controller = {
     } catch (error) {
       return res.status(404).json({
         success: false,
-        message: "Favourites not found",
+        message: "Favoritos no encontrados",
       });
     }
   },
@@ -29,12 +29,12 @@ const controller = {
         await Favourite.create(req.body);
         return res.status(201).json({
           success: true,
-          message: "Shop added to favourites",
+          message: "Tienda añadida a favoritos",
         });
       } else {
         return res.status(400).json({
           success: false,
-          message: "Shop already on favourites",
+          message: "La tienda ya está en favoritos",
         });
       }
     } catch (error) {
@@ -50,7 +50,7 @@ const controller = {
       });
       return res.status(200).json({
         success: true,
-        message: "Shop removed from favourites",
+        message: "Tienda eliminada de favoritos",
       });
     } catch (error) {
       next(error);
@@ -62,7 +62,7 @@ const controller = {
       await Favourite.deleteMany({ user_id: req.user._id });
       return res.status(200).json({
         success: true,
-        message: "Favourites clear",
+        message: "Favouritos limpios",
       });
     } catch (err) {
       next(err);

@@ -12,7 +12,7 @@ const controller = {
             }
             return res.status(404).json({
                 success: false,
-                message: 'Shop not found'
+                message: 'Tienda no encontrada'
             })
         }catch(err){
             next(err)

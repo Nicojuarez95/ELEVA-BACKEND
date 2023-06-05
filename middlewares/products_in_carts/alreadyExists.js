@@ -16,7 +16,7 @@ async function alreadyExists(req, res, next) {
                         {new:true})
                     return res.status(200).json({
                         success: true,
-                        message: "Product already exists, the quantity is added "
+                        message: "El producto ya existe, se agrega la cantidad "
                         })
                 }else{
                     next()
@@ -24,7 +24,7 @@ async function alreadyExists(req, res, next) {
             }else{
                 return res.status(404).json({
                     success: false,
-                    message: "Shop not found"
+                    message: "Tienda no encontrada"
                     })
             }
         }catch(error){

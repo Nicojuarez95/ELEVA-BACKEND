@@ -7,9 +7,9 @@ const schema = Joi.object({
         .min(3)
         .messages(
             {
-                'string.min': 'The name must be at least 3 characters',
-                'string.empty': 'The name cannot be empty',
-                'any.required': 'A name is required',
+                'string.min': 'El nombre debe tener al menos 3 caracteres.',
+                'string.empty': 'El nombre no puede estar vacío.',
+                'any.required': 'Se requiere un nombre'
             }
         ),
     category: Joi
@@ -18,9 +18,9 @@ const schema = Joi.object({
         .min(3)
         .messages(
             {
-                'string.min': 'The category must be at least 3 characters',
-                'string.empty': 'The category cannot be empty',
-                'any.required': 'A category is required',
+                "string.min": "La categoría debe tener al menos 3 caracteres.",
+                'string.empty': 'La categoría no puede estar vacía',
+                'any.required': 'Se requiere una categoría'
             }
         ),
     city: Joi
@@ -29,9 +29,9 @@ const schema = Joi.object({
         .min(3)
         .messages(
             {
-                'string.min': 'The city must be at least 3 characters',
-                'string.empty': 'The city cannot be empty',
-                'any.required': 'A city is required',
+                'string.min': 'La ciudad debe tener al menos 3 caracteres.',
+                'string.empty': 'La ciudad no puede estar vacía',
+                'any.required': 'Se requiere una ciudad',
             }
         ),
     country: Joi
@@ -40,9 +40,9 @@ const schema = Joi.object({
         .min(3)
         .messages(
             {
-                'string.min': 'The country must be at least 3 characters',
-                'string.empty': 'The country cannot be empty',
-                'any.required': 'A country is required',
+                'string.min': 'El país debe tener al menos 3 caracteres.',
+                'string.empty': 'El país no puede estar vacío',
+                'any.required': 'Se requiere un país',
             }
         ),
     description: Joi
@@ -52,10 +52,10 @@ const schema = Joi.object({
         .max(50)
         .messages(
             {
-                'string.min': 'The description must be at least 8 characters',
-                'string.max': 'The description cannot exceed 50 characters',
-                'string.empty': 'The description cannot be empty',
-                'any.required': 'A description is required',
+            "string.min": "La descripción debe tener al menos 8 caracteres.",
+            "string.max": "La descripción debe tener un máximo de 50 caracteres.",
+            'string.empty': 'La descripción no puede estar vacía.',
+            'any.required': 'Se requiere una descripción'
             }
         ),
     token: Joi
@@ -65,10 +65,10 @@ const schema = Joi.object({
         .max(200)
         .messages(
             {
-                'string.min': 'The token must be at least 10 characters',
-                'string.max': 'The token cannot exceed 200 characters',
-                'string.empty': 'The token cannot be empty',
-                'any.required': 'A token is required',
+                'string.min': 'El token debe tener al menos 10 caracteres.',
+                'string.max': 'El token no puede exceder los 200 caracteres.',
+                'string.empty': 'El token no puede estar vacío',
+                'any.required': 'Se requiere un token de Mercado Pago',
             }
         ),
     photo: Joi
@@ -78,10 +78,10 @@ const schema = Joi.object({
         .uri()
         .messages(
             {
-                'string.min': 'The photo must be at least 8 characters',
-                'string.empty': 'The photo cannot be empty',
-                'any.required': 'A photo is required',
-                'string.uri': 'A valid URL is necessary'
+            'string.min': 'La foto debe tener al menos 8 caracteres.',
+            'string.empty': 'La foto no puede estar vacía.',
+            'any.required': 'Se requiere una foto',
+            'string.uri': 'Es necesaria una URL válida'
             }
         ),
     phone : Joi
@@ -90,8 +90,8 @@ const schema = Joi.object({
         .required()
         .messages(
             {
-                'string.empty': 'The phone cannot be empty',
-                'any.required': 'A phone is required',
+                'string.empty': 'El teléfono no puede estar vacío',
+                'any.required': 'Se requiere un teléfono',
             }
         ),
     banner: Joi
@@ -101,10 +101,10 @@ const schema = Joi.object({
         .uri()
         .messages(
             {
-                'string.min': 'The banner must be at least 8 characters',
-                'string.empty': 'The banner cannot be empty',
-                'any.required': 'A banner is required',
-                'string.uri': 'A valid URL is necessary'
+                'string.min': 'El banner debe tener al menos 8 caracteres.',
+                'string.empty': 'El banner no puede estar vacío',
+                'any.required': 'Se requiere un banner',
+                'string.uri': 'Se necesita una URL válida'
             }
         )
 })

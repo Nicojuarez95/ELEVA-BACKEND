@@ -9,7 +9,7 @@ async function alreadyExists(req, res, next) {
         if(shop.active){
             return res.status(400).json({
                 success: false,
-                message: 'You can only have 1 shop'
+                message: 'Puedes tener solo una tienda'
             })
         }else{
             await Shop.findOneAndUpdate(
@@ -18,7 +18,7 @@ async function alreadyExists(req, res, next) {
             )
             return res.status(200).json({
                 success: true,
-                message: "Welcome back "+shop.name
+                message: "Bienvenido de nuevo "+shop.name
             })
         }
     } else{

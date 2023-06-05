@@ -12,12 +12,12 @@ const controller = {
                 if(product){
                     return res.status(200).json({
                         success: true,
-                        message: 'Products deleted successfully'
+                        message: 'Productos eliminados con éxito'
                     })
                 }else{
                     return res.status(404).json({
                         success: false,
-                        message: 'Products not found'
+                        message: 'Productos no encontrados'
                     })
                 }
             }

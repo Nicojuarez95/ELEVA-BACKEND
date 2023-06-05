@@ -23,12 +23,12 @@ const controller = {
 
                 return res.status(201).json({
                     success: true,
-                    message: 'Payment created'
+                    message: 'Pago creado'
                 })
             }else{
                 return res.status(404).json({
                     success: false,
-                    message: 'Shop not found'
+                    message: 'Tienda no encontrada'
                 })
             }
         }catch(err){

@@ -5,10 +5,10 @@ const schema = Joi.object({
     .string()
     .required()
     .messages({
-        "string.min": "The category must have at least 3 characteres",
-        "string.max": "The category must have a maximum of 20 characteres",
-        'string.empty': 'The category cannot be empty',
-        'any.required': 'A category is required'
+        "string.min": "La categoría debe tener al menos 3 caracteres",
+        "string.max": "La categoría debe tener un máximo de 20 caracteres",
+        'string.empty': 'La categoría no puede estar vacía',
+        'any.required': 'Se requiere una categoría'
     }),
 })
 

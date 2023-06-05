@@ -12,7 +12,7 @@ async function getOne(req, res, next) {
             }else{
                 return res.status(404).json({
                     success:false,
-                    message: "Products not found"
+                    message: "Productos no encontrados"
                 })
             }
     }catch(error){

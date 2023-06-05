@@ -12,7 +12,7 @@ const controller = {
             }
             return res.status(404).json({
                 success: false,
-                message: "Categories not found"
+                message: "Categorías no encontradas"
             })
         }catch(error){
             next(error)

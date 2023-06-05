@@ -7,10 +7,10 @@ const schema = Joi.object({
     .min(3)
     .max(20)
     .messages({
-    "string.min": "The name must have at least 3 characteres",
-    "string.max": "The name must have a maximum of 20 characteres",
-    'string.empty': 'The name cannot be empty',
-    'any.required': 'A name is required',
+      "string.min": "El nombre debe tener al menos 3 caracteres.",
+      "string.max": "El nombre debe tener un máximo de 20 caracteres.",
+      'string.empty': 'El nombre no puede estar vacío.',
+      'any.required': 'Se requiere un nombre'
   }),
   last_name: Joi
     .string()
@@ -18,10 +18,10 @@ const schema = Joi.object({
     .min(3)
     .max(20)
     .messages({
-    "string.min": "The last name must have at least 3 characteres",
-    "string.max": "The last name must have a maximum of 20 characteres",
-    'string.empty': 'The last name cannot be empty',
-    'any.required': 'A last name is required',
+      "string.min": "El apellido debe tener al menos 3 caracteres.",
+      "string.max": "El apellido debe tener un máximo de 20 caracteres.",
+      'string.empty': 'El apellido no puede estar vacío.',
+      'any.required': 'Se requiere un apellido'
   }),
   email: Joi
     .string()
@@ -29,9 +29,9 @@ const schema = Joi.object({
     .min(8)
     .email({ minDomainSegments: 2 })
     .messages({
-      "string.min": "The email must have at least 8 characteres",
-      'string.empty': 'The email cannot be empty',
-      'any.required': 'A email is required',
+      "string.min": "El correo electrónico debe tener al menos 8 caracteres.",
+      'string.empty': 'El correo electrónico no puede estar vacío.',
+      'any.required': 'Se requiere un correo electrónico',
     }),
   password: Joi
     .string()
@@ -39,10 +39,10 @@ const schema = Joi.object({
     .min(8)
     .max(20)
     .messages({
-    "string.min": "The password must have at least 8 characteres",
-    "string.max": "The password must have a maximum of 20 characteres", 
-    'string.empty': 'The password cannot be empty',
-    'any.required': 'A password is required',
+    "string.min": "La contraseña debe tener al menos 8 caracteres",
+    "string.max": "La contraseña debe tener un máximo de 20 caracteres", 
+    'string.empty': 'La contraseña no puede estar vacía',
+    'any.required': 'Se requiere una contraseña',
   })
 });
 

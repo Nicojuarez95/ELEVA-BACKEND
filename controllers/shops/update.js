@@ -10,14 +10,14 @@ const controller = {
             )
             if(shop){
                 return res.status(200).json({
-                    message: "Shop updated",
+                    message: "Tienda actualizada",
                     success: true,
                     shop
                 })
             }
             return res.status(404).json({
                 success: false,
-                message: 'Shop not found'
+                message: 'Tienda no encontrada'
             })
         }catch(err){
             next(err)

@@ -6,12 +6,12 @@ async function destroy_all(req, res, next) {
         if (product) {
             return res.status(200).json({
                 success: true,
-                message: 'Products deleted successfully'
+                message: 'Productos eliminados con éxito'
             })
         } else {
             return res.status(404).json({
                 success: false,
-                message: 'Products not found'
+                message: 'Producto no encontrado'
             })
         }
     } catch (err) {

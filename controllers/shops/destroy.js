@@ -19,12 +19,12 @@ const controller = {
                 )
                 return res.status(200).json({
                     success: true,
-                    message: 'Shop deleted successfully'
+                    message: 'Tienda eliminada con éxito'
                 })
             } else {
                 return res.status(404).json({
                     success: false,
-                    message: 'Shop not found'
+                    message: 'Tienda no encontrada'
                 })
             }
         } catch (err) {

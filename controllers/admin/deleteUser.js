@@ -17,12 +17,12 @@ async function deleteUser(req, res, next) {
             await Favourite.deleteMany({ user_id: user._id })
             return res.status(200).json({
                 success: true,
-                message: 'User deleted'
+                message: 'Usuario eliminado'
             })
         }
         return res.status(404).json({
             success: false,
-            message: 'User not found'
+            message: 'Usuario no encontrado'
         })
     } catch (err) {
         next(err)

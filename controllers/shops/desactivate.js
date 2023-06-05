@@ -17,18 +17,18 @@ const controller = {
                 if (state) {
                     return res.status(200).json({
                         success: true,
-                        message: 'Shop activated'
+                        message: 'Tienda activada'
                     })
                 } else {
                     return res.status(200).json({
                         success: true,
-                        message: 'Shop desactivated'
+                        message: 'Tienda desactivada'
                     })
                 }
             }
             return res.status(404).json({
                 success: false,
-                message: 'Shop not found'
+                message: 'Tienda no encontrada'
             })
         } catch (err) {
             next(err)

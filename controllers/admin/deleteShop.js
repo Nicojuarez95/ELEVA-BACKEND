@@ -18,12 +18,12 @@ async function deleteShop(req, res, next) {
             )
             return res.status(200).json({
                 success: true,
-                message: 'Shop deleted'
+                message: 'Tienda eliminada'
             })
         }
         return res.status(404).json({
             success: false,
-            message: 'Shop not found'
+            message: 'Tienda no encontrada'
         })
     } catch (err) {
         next(err)

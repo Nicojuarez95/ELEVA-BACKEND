@@ -8,7 +8,7 @@ async function alreadyExists(req,res,next){
         }else{
             return res.status(400).json({
                 success: false,
-                message: 'Payment already exists'
+                message: 'El pago ya existe'
             })
         }
     }catch(err){

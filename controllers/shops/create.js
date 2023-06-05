@@ -11,7 +11,7 @@ const controller = {
       await User.findOneAndUpdate({ _id: user._id }, { is_seller: true });
       return res.status(201).json({
         success: true,
-        message: "New shop created succesfully",
+        message: "Nueva tienda creada con éxito",
         data: req.body,
       });
     } catch (error) {

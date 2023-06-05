@@ -7,19 +7,19 @@ const schema = Joi.object({
         .min(3)
         .max(20)
         .messages({
-            "string.min": "The name must have at least 3 characteres",
-            "string.max": "The name must have a maximum of 20 characteres",
-            'string.empty': 'The name cannot be empty',
-            'any.required': 'A name is required'
+            "string.min": "El nombre debe tener al menos 3 caracteres.",
+            "string.max": "El nombre debe tener un máximo de 20 caracteres.",
+            'string.empty': 'El nombre no puede estar vacío.',
+            'any.required': 'Se requiere un nombre'
         }),
     price: Joi
         .number()
         .required()
         .min(1)
         .messages({
-            "number.min": "The price must be at least 1",
-            'number.empty': 'The price cannot be empty',
-            'any.required': 'A price is required'
+            "number.min": "El precio debe ser al menos 1",
+            'number.empty': 'El precio no puede estar vacío',
+            'any.required': 'Se requiere un precio'
         }),
     photo: Joi
         .string()
@@ -27,19 +27,19 @@ const schema = Joi.object({
         .min(8)
         .uri()
         .messages({
-            'string.min': 'The photo must be at least 8 characters',
-            'string.empty': 'The photo cannot be empty',
-            'any.required': 'A photo is required',
-            'string.uri': 'A valid URL is necessary'
+            'string.min': 'La foto debe tener al menos 8 caracteres.',
+            'string.empty': 'La foto no puede estar vacía.',
+            'any.required': 'Se requiere una foto',
+            'string.uri': 'Es necesaria una URL válida'
         }),
     stock: Joi
         .number()
         .required()
         .min(0)
         .messages({
-            'number.min': 'The stock must be at least 0 characters',
-            'number.empty': 'The stock cannot be empty',
-            'any.required': 'A stock is required',
+            'number.min': 'El stock debe tener al menos 1 caracteres.',
+            'number.empty': 'El stock no puede estar vacía',
+            'any.required': 'Se requiere un stock',
         }),
     category: Joi
         .string()
@@ -47,10 +47,10 @@ const schema = Joi.object({
         .min(3)
         .max(20)
         .messages({
-            "string.min": "The category must have at least 3 characteres",
-            "string.max": "The category must have a maximum of 20 characteres",
-            'string.empty': 'The category cannot be empty',
-            'any.required': 'A category is required'
+            "string.min": "La categoría debe tener al menos 3 caracteres.",
+            "string.max": "La categoría debe tener un máximo de 20 caracteres.",
+            'string.empty': 'La categoría no puede estar vacía',
+            'any.required': 'Se requiere una categoría'
         }),
     description: Joi
         .string()
@@ -58,10 +58,10 @@ const schema = Joi.object({
         .min(20)
         .max(200)
         .messages({
-            "string.min": "The description must have at least 20 characteres",
-            "string.max": "The description must have a maximum of 200 characteres",
-            'string.empty': 'The description cannot be empty',
-            'any.required': 'A description is required'
+            "string.min": "La descripción debe tener al menos 20 caracteres.",
+            "string.max": "La descripción debe tener un máximo de 200 caracteres.",
+            'string.empty': 'La descripción no puede estar vacía.',
+            'any.required': 'Se requiere una descripción'
         }),
   });
   

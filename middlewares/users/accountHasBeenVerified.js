@@ -4,7 +4,7 @@ async function accountHasBeenVerified(req,res,next) {
     }
     	  return res.status(400).json({
             succes: false,
-            message:'You are not verified!'})
+            message:'No estas verificado!'})
 }
 
 export default accountHasBeenVerified

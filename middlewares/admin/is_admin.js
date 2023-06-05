@@ -7,7 +7,7 @@ async function is_admin(req,res,next){
     }
     return res.status(500).json({
         success: false,
-        message: 'You are not an admin'
+        message: 'no eres administrador'
     })
 }
 

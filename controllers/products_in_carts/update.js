@@ -9,11 +9,11 @@ const controller = {
           { new: true }
         );
             if (!product) {
-            return res.status(404).json({ message: 'Product not found' });
+            return res.status(404).json({ message: 'Producto no encontrado' });
             }
-            res.status(200).json({ success: true, message: "Product updated", product});
+            res.status(200).json({ success: true, message: "Producto actualizado", product});
       } catch (error) {
-            res.status(500).send({ message: 'Error updating the product' });
+            res.status(500).send({ message: 'Error al actualizar el producto' });
       }
     },
   };

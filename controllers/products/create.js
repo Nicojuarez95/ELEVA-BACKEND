@@ -10,7 +10,7 @@ async function create(req, res, next){
         await Products.create(req.body)
         return res.status(201).json({
             success: true,
-            message: "New product for sale",
+            message: "Nuevo producto a la venta",
             data: req.body
         })
     }catch(error){

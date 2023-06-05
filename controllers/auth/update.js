@@ -12,7 +12,7 @@ const controller = {
       upd.password=null
       return res.status(200).json({
         success: true,
-        message:'Update!',
+        message:'Actualizado!',
         upd
       })
     } catch (error) {

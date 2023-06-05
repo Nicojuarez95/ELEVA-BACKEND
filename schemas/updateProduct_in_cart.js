@@ -6,9 +6,9 @@ const schema = Joi.object({
         .required()
         .min(1)
         .messages({
-            'number.min': 'The quantity must be at least 1 characters',
-            'number.empty': 'The quantity cannot be empty',
-            'any.required': 'A quantity is required',
+            'number.min': 'La cantidad debe tener al menos 1 carácter',
+            'number.empty': 'La cantidad no puede estar vacía',
+            'any.required': 'Se requiere una cantidad',
         }),
 })
 
