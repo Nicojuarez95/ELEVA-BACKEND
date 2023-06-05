@@ -2,7 +2,7 @@ import User from '../../models/User.js'
 import Crypto from 'crypto'
 import bcryptjs from 'bcryptjs'
 import jsonwebtoken from 'jsonwebtoken'
-import createMailTransporter from '../../config/mailer.js'
+import createMailTransporter from "../../config/mailer.js"
 
 const controller = {
 

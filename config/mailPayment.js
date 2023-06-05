@@ -36,7 +36,7 @@ async function createMailTransporterPay(userPayment) {
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: '"Lance" <juareznico61@gmail.com>',
+        from: '"ProyectoWeb" <proyectowebdevelopment@gmail.com>',
         to: email,
         subject: "Purchase details...",
         html: `<!DOCTYPE html>
