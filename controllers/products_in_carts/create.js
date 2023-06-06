@@ -11,7 +11,7 @@ const controller = {
             await Product_in_carts.create(req.body)
             return res.status(201).json({
                 success: true,
-                message: "Producto nuevo agregar al carrito",
+                message: "Nuevo producto agregado al carrito",
                 data: req.body
             })
         }catch(error){
