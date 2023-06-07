@@ -10,13 +10,27 @@ let router = express.Router();
 const { create } = createController
 
 //mercadopago
-router.post("/",cors(), (req, res) => {
+router.post("/",cors(), async (req, res) => {
   mercadopago.configure({access_token: req.body.token})
 
+  const { address, city, postalCode } = req.body.shippingData;
+
+  const items = await Promise.all(
+    req.body.products.map(async (item) => {
+      return {
+        id: item.id,
+        title: `${item.title} - Dirección: "${address}", Ciudad: "${city}", Código postal: "${postalCode}" `, // Incluye la información de dirección en el título
+        currency_id: 'ARS',
+        unit_price: item.unit_price,
+        picture_url: item.photo,
+        quantity: item.quantity,
+      };
+    })
+  );
     let preference = {
-      items: req.body.products,
+      items,
       back_urls: {
-        success: `https://lance-app.vercel.app/shop/${req.body.shopId}`,
+        success: `http://localhost:3000/shop/${req.body.shopId}`,
         failure: "",
         pending: "",
       },
