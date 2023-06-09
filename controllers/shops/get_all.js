@@ -13,6 +13,9 @@ const controller = {
       if (req.query.category) {
         filter.category = req.query.category.split(",");
       }
+      if (req.query.city) {
+        filter.city = req.query.city.split(",");
+      }
 
       let shops = await Shop.find(filter);
       if (shops) {

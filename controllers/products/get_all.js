@@ -34,7 +34,7 @@ async function get_all(req, res, next) {
         if(shop){
             const Products = await Product.find({...filter, store_id: shop._id})
                 .select('name photo price description stock category _id store_id')
-                .sort({name:sort})
+                .sort({price:sort})
                 // .sort({title:1})
                 // .skip( skip )
                 // .limit(pagination.limit > 0 ? pagination.limit : 0 )

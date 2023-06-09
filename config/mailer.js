@@ -2,23 +2,23 @@ import nodemailer from 'nodemailer'
 
 
 async function createMailTransporter(user) {
-    
-    let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true, 
-      auth: {
-        user: "proyectowebdevelopment@gmail.com",
-        pass: 'qjagguzopegzjnlu'
-      },
-    });
-  
-    // send mail with defined transport object
-    let info = await transporter.sendMail({
-        from: '"ProyectoWeb" <proyectowebdevelopment@gmail.com>',
-        to: user.email,
-        subject:"Verifique su email...",
-        html: `<table align="center" border="0" cellpadding="0" cellspacing="0" class="m_-5401722008193577908deviceWidth" style="width:100%;min-width:100%" width="100%">
+
+  let transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  // send mail with defined transport object
+  let info = await transporter.sendMail({
+    from: '"ProyectoWeb" <proyectowebdevelopment@gmail.com>',
+    to: user.email,
+    subject: "Verifique su email...",
+    html: `<table align="center" border="0" cellpadding="0" cellspacing="0" class="m_-5401722008193577908deviceWidth" style="width:100%;min-width:100%" width="100%">
         <tbody><tr>
         <td align="center" bgcolor="#ffffff">
         
@@ -143,9 +143,9 @@ async function createMailTransporter(user) {
         
         
         `
-    });
-  
+  });
+
 }
-  
+
 
 export default createMailTransporter
