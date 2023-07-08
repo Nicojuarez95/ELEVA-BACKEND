@@ -9,7 +9,6 @@ import categoryRouter from "../routes/categories.js"
 
 let router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {res.render('index', { title: 'Express' });});
 
 router.use('/auth',userRouter)
