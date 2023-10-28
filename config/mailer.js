@@ -102,7 +102,6 @@ async function createMailTransporter(user) {
         </tr>
         </tbody></table>
         
-        
         </div>
         
         </td>
