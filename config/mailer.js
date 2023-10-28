@@ -79,8 +79,7 @@ async function createMailTransporter(user) {
         <td align="center" style="padding-top:16px">
         <p style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:26px;font-weight:normal;color:#777777;max-width:380px;text-align:center">
         ¡Gracias por ayudarnos a hacer tu cuenta más segura! Haga clic en el botón de abajo para terminar de verificar su correo electrónico.
-        
-        
+            
         </p>
         
         </td>
