@@ -2,7 +2,7 @@
  * @schema es el schema de validacion de joi (es necesario importar el schema en el archivo donde se ejecute el middleware)
  * @validate es un método de joi para validar los datos del schema
  * requiere que invoquemos el schema de validacion y necesita dos parámetros para funcionar
- * req.body es el objeto que envía el usuario del formulario
+ * req.body
  */
 const validator = (schema) => [
     (req, res, next) => {
