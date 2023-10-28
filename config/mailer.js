@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer'
 
-
 async function createMailTransporter(user) {
 
   let transporter = nodemailer.createTransport({
