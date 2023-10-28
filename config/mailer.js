@@ -22,7 +22,6 @@ async function createMailTransporter(user) {
         <td align="center" bgcolor="#ffffff">
         
         
-        
         <table border="0" cellpadding="0" cellspacing="0" class="m_-5401722008193577908deviceWidth" style="width:100%;max-width:600px" width="600">
         <tbody><tr>
         <td height="32" style="height:32px;min-height:32px;line-height:32px;font-size:1px">
