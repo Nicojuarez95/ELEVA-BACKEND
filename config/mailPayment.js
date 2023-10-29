@@ -135,5 +135,4 @@ async function createMailTransporterPay(userPayment) {
 
 }
 
-
 export default createMailTransporterPay
