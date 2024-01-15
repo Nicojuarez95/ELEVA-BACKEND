@@ -1,8 +1,9 @@
 import express from 'express'
 import validator from '../middlewares/validator.js'
 import schema_signup from '../schemas/sign_up.js'
-import schemaUpd from '../schemas/updateUser.js'
 import schema_signin from '../schemas/sign_in.js'
+import schema_google_signup from '../schemas/google_sign_up.js'
+import schemaUpd from '../schemas/updateUser.js'
 import controller from '../controllers/auth/auth.js'
 import accountExistsSignUp from '../middlewares/users/accountExistsSignUp.js'
 import accountExistsSignIn from '../middlewares/users/accountExistsSignIn.js'
@@ -19,6 +20,8 @@ const { upd } = updateController
 let router = express.Router();
 
 router.get('/verify',verifyMail)
+router.post('/googlesignup', validator(schema_google_signup), accountExistsSignUp, sign_up)
+router.post('/googlesignin', validator(schema_signin), accountExistsSignIn, passwordIsOk, sign_in)
 router.post('/signup', validator(schema_signup), accountExistsSignUp, sign_up)
 router.post('/signin', validator(schema_signin), accountExistsSignIn,accountHasBeenVerified, passwordIsOk, sign_in )
 router.post('/signout', passport.authenticate('jwt',{session:false}), sign_out) 
