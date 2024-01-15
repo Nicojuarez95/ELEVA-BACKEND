@@ -34,7 +34,7 @@ export default async function googleSignIn(req, res, next) {
                 return res.status(200).json({
                     success: true,
                     message: 'Conectado!',
-                    loginUser,
+                    user: loginUser,
                     token
                 })
             } else {
@@ -66,7 +66,7 @@ export default async function googleSignIn(req, res, next) {
             return res.status(200).json({
                 succes: true,
                 message: 'Conectado!',
-                loginUser,
+                user: loginUser,
                 token
             })
         }
