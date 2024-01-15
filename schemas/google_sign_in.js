@@ -39,9 +39,7 @@ const schema = Joi.object({
         .min(20)
         .max(35),
     photo: Joi
-        .string(),
-    is_verified: Joi
-        .boolean()
+        .string()
 });
 
 export default schema;

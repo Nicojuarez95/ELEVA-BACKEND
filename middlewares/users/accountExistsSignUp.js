@@ -11,4 +11,3 @@ async function accountExistsSignUp(req,res,next) {
 }
 
 export default accountExistsSignUp
-
