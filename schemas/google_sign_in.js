@@ -1,28 +1,6 @@
 import Joi from "joi-oid";
 
 const schema = Joi.object({
-    name: Joi
-        .string()
-        .required()
-        .min(3)
-        .max(20)
-        .messages({
-            "string.min": "El nombre debe tener al menos 3 caracteres.",
-            "string.max": "El nombre debe tener un máximo de 20 caracteres.",
-            'string.empty': 'El nombre no puede estar vacío.',
-            'any.required': 'Se requiere un nombre'
-        }),
-    last_name: Joi
-        .string()
-        .required()
-        .min(3)
-        .max(20)
-        .messages({
-            "string.min": "El apellido debe tener al menos 3 caracteres.",
-            "string.max": "El apellido debe tener un máximo de 20 caracteres.",
-            'string.empty': 'El apellido no puede estar vacío.',
-            'any.required': 'Se requiere un apellido'
-        }),
     email: Joi
         .string()
         .required()
@@ -38,8 +16,6 @@ const schema = Joi.object({
         .required()
         .min(20)
         .max(35),
-    photo: Joi
-        .string()
 });
 
 export default schema;
