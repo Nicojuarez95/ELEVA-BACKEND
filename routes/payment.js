@@ -30,7 +30,7 @@ router.post("/",cors(), async (req, res) => {
     let preference = {
       items,
       back_urls: {
-        success: `http://localhost:3000/shop/${req.body.shopId}`,
+        success: `http://localhost:3000/shop/${req.body.shopName}`,
         failure: "",
         pending: "",
       },
