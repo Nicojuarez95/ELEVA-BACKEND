@@ -4,7 +4,7 @@ import Shop from "../../models/Shop.js"
 const controller = {
     createCartProduct: async(req, res, next) =>{
         try{
-            let shop = await Shop.findOne({_id: req.params.id})
+            let shop = await Shop.findOne({shopName: req.params.shopName})
             req.body.store_id= shop._id
             req.body.user_id = req.user._id
 

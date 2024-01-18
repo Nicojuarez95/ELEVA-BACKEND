@@ -2,7 +2,7 @@ import Shop from '../../models/Shop.js'
 
 async function desactivate(req, res, next) {
     try {
-        let shop = await Shop.findOne({ _id: req.params.shopid })
+        let shop = await Shop.findOne({ shopName: req.params.shopName })
         if (shop) {
             if (shop.active) {
                 await Shop.findOneAndUpdate(

@@ -3,7 +3,7 @@ import Category from "../../models/category.js"
 const controller = {
     get_category: async(req, res, next) =>{
         try{
-            let categories = await Category.find({store_id: req.params.shopid})
+            let categories = await Category.find({shopName: req.params.shopName})
             if(categories){
                 return res.status(200).json({
                     success: true,

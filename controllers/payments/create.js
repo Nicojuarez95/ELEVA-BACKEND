@@ -6,7 +6,7 @@ import createMailTransporterPay from "../../config/mailPayment.js";
 const controller = {
     create: async(req,res,next) => {
         try{
-            let shop = await Shop.findOne({_id: req.params.shopid})
+            let shop = await Shop.findOne({shopName: req.params.shopName})
             const user = await User.findById(req.user._id);
             req.body.store_id= shop._id
             req.body.user_id = req.user._id

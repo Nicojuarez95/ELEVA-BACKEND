@@ -3,7 +3,7 @@ import Product_in_carts from '../../models/Product_in_carts.js';
 
 async function alreadyExists(req, res, next) {
     try {
-        const shop = await Shop.findOne({ _id: req.params.id });
+        const shop = await Shop.findOne({ shopName: req.params.shopName });
 
         if (!shop) {
             return res.status(404).json({

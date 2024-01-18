@@ -1,7 +1,7 @@
 import Shop from '../../models/Shop.js'
 
 async function is_active(req, res, next) {
-    const shop = await Shop.findOne({ _id: req.params.id })
+    const shop = await Shop.findOne({ shopName: req.params.shopName })
     if (shop) {
         if (shop.active) {
             next()

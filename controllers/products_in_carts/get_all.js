@@ -3,7 +3,7 @@ import Product_in_carts from '../../models/Product_in_carts.js'
 
 async function get_all(req, res, next) {
     try{
-        let shop = await Shop.findOne({ _id: req.params.id })
+        let shop = await Shop.findOne({ shopName: req.params.shopName })
         if(shop){
             let products = await Product_in_carts.find({ store_id: shop._id, user_id: req.user._id })
             if(products){

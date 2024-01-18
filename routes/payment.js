@@ -43,6 +43,6 @@ router.post("/",cors(), async (req, res) => {
       .catch((error) => res.status(400).json({ error: error.message }));
   });
 
-  router.post('/:shopid', passport.authenticate("jwt", { session:false }), alreadyExists, create )
+  router.post('/:shopName', passport.authenticate("jwt", { session:false }), alreadyExists, create )
   
   export default router;
