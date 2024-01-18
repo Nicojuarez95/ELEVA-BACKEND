@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 const schema = new mongoose.Schema(
     {
         name: { type: String, require: true },
+        shopName: { type: String, require: true },
         category: { type: String, require: true },
         city: { type: String, require: true },
         country: { type: String, require: true },

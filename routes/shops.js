@@ -10,6 +10,7 @@ import validator from '../middlewares/validator.js'
 import schema from '../schemas/shops.js'
 import passport from '../middlewares/passport.js';
 import alreadyExists from '../middlewares/shops/alreadyExists.js'
+import nameExists from '../middlewares/shops/nameExists.js'
 import is_activeMe from '../middlewares/shops/is_activeMe.js'
 import is_active from '../middlewares/shops/is_active.js'
 import getAllProductsController from "../controllers/products/get_all.js"
@@ -36,11 +37,11 @@ const { updateCart } = updateCartController
 
 let router = express.Router()
 
-router.post('/create', passport.authenticate("jwt", { session:false }), validator(schema), alreadyExists, create)
+router.post('/create', passport.authenticate("jwt", { session:false }), validator(schema), alreadyExists, nameExists, create)
 router.get('/', get_all)
 router.get('/me', passport.authenticate("jwt", { session:false }), is_activeMe, me)
-router.get("/:id/products", getAllProductsController )
-router.get('/:id', is_active, get_one)
+router.get("/:shopName/products", getAllProductsController )
+router.get('/:shopName', is_active, get_one)
 router.put('/update', passport.authenticate("jwt", { session:false }), validator(schema), is_activeMe, update)
 router.put('/desactivate', passport.authenticate("jwt", { session:false }), desactivate)
 router.delete('/delete', passport.authenticate("jwt", { session:false }), destroy)

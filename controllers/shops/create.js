@@ -6,6 +6,7 @@ const controller = {
     const { user } = req;
     req.body.user_id = user._id;
     req.body.active = true;
+    req.body.shopName = req.body.name.replace(/\s+/g, '').toLowerCase()
     try {
       await Shop.create(req.body);
       await User.findOneAndUpdate({ _id: user._id }, { is_seller: true });

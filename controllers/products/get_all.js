@@ -29,7 +29,7 @@ async function get_all(req, res, next) {
         sort = req.query.sort
     }
     try{
-        const shop = await Shop.findOne({ _id: req.params.id })
+        const shop = await Shop.findOne({ shopName: req.params.shopName })
 
         if(shop){
             const Products = await Product.find({...filter, store_id: shop._id})
