@@ -50,7 +50,7 @@ router.post('/:shopName/createcartproduct', passport.authenticate("jwt", { sessi
 router.get('/:shopName/cart', passport.authenticate("jwt", { session:false }), getAllProductsInCart)
 router.put('/cart/update/:productid', passport.authenticate("jwt", { session:false }), validator(updateSchema), updateCart )
 router.delete('/cart/deleteone/:productid', passport.authenticate("jwt", { session:false }), destroy_one_product )
-router.delete('/:shopName/cart/deleteall', passport.authenticate("jwt", { session:false }), destroy_all_product )
+router.delete('/:shopId/cart/deleteall', passport.authenticate("jwt", { session:false }), destroy_all_product )
 // 
 
 export default router

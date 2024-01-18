@@ -10,7 +10,7 @@ const { get_category } = categoryGetAll
 
 let router = express.Router();
 
-router.get("/:shopName", get_category)
+router.get("/:shopId", get_category)
 router.post('/create', passport.authenticate('jwt',{session:false}), validator(schema), create)
 
 export default router
