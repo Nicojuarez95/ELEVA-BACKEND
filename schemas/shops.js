@@ -86,7 +86,7 @@ const schema = Joi.object({
         ),
     phone : Joi
         .string()
-        .pattern(/^\d{13}$/)
+        .pattern(/^\d{12}$/)
         .required()
         .messages(
             {
