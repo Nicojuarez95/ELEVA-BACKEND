@@ -34,15 +34,15 @@ const schema = Joi.object({
                 'any.required': 'Se requiere una ciudad',
             }
         ),
-    country: Joi
+    province: Joi
         .string()
         .required()
         .min(3)
         .messages(
             {
-                'string.min': 'El país debe tener al menos 3 caracteres.',
-                'string.empty': 'El país no puede estar vacío',
-                'any.required': 'Se requiere un país',
+                'string.min': 'La provincia debe tener al menos 3 caracteres.',
+                'string.empty': 'La provincia no puede estar vacía',
+                'any.required': 'Se requiere una provincia',
             }
         ),
     description: Joi

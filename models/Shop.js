@@ -6,7 +6,7 @@ const schema = new mongoose.Schema(
         shopName: { type: String, require: true },
         category: { type: String, require: true },
         city: { type: String, require: true },
-        country: { type: String, require: true },
+        province: { type: String, require: true },
         description: { type: String, require: true },
         token: { type: String, require: true },
         photo: { type: String, require: true },
