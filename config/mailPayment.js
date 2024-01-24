@@ -36,7 +36,7 @@ async function createMailTransporterPay(userPayment) {
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"ProyectoWeb" <proyectowebdevelopment@gmail.com>',
+    from: '"ELEVA" <eleva.development@gmail.com>',
     to: email,
     subject: "Detalles de la compra...",
     html: `<!DOCTYPE html>
@@ -52,7 +52,7 @@ async function createMailTransporterPay(userPayment) {
               <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#F4F4F2" style="max-width:614px;margin:0 auto;">
                 <tr>
                   <td height="60" style="font-size:0;line-height:0;border-collapse:collapse;">
-                    <img style="width:129px;height:38px;padding-left:70px;object-fit:cover;object-position:center;" src="https://i.postimg.cc/ZYg31Rrs/Proyecto-2-removebg-preview.png" alt="logo" />
+                    <img style="width:129px;height:38px;padding-left:70px;object-fit:cover;object-position:center;" src="https://i.postimg.cc/RZxDYXf4/logo-Eleva.png" alt="logo" />
                   </td>
                 </tr>
                 <tr>

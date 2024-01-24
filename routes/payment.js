@@ -30,7 +30,7 @@ router.post("/",cors(), async (req, res) => {
     let preference = {
       items,
       back_urls: {
-        success: `http://localhost:3000/shop/${req.body.shopName}`,
+        success: `https://www.elevadev.store/shop/${req.body.shopName}`,
         failure: "",
         pending: "",
       },
